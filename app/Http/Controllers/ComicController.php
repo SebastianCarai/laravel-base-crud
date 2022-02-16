@@ -53,10 +53,10 @@ class ComicController extends Controller
      */
     public function show($id)
     {
-        $comic_to_show = Comic::findOrFail($id);
+        $comic = Comic::findOrFail($id);
 
         $data = [
-            'comic_to_show' => $comic_to_show
+            'comic' => $comic
         ];
 
         return view('comics.show', $data);

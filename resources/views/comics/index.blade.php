@@ -4,7 +4,7 @@
     <div class="container d-flex flex-wrap">
         @forelse ($comics as $comic)
             <div class="card m-3" style="width: 18rem;">
-                <a href="#">
+                <a href="{{route ('comics.show', ['comic' => $comic->id])}}">
                     <img src="{{$comic->thumb}}" class="card-img-top" alt="{{$comic->title}}">  
                 </a>
                 <div class="card-body">

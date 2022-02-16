@@ -10,8 +10,10 @@
 </head>
 <body>
     
-    <header>
-        <h1>Header</h1>
+    <header class="p-3">
+        <a href="{{ route('comics.index') }}">
+            Torna alla lista dei comics
+        </a>
     </header>
 
     <main>
