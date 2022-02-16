@@ -11,8 +11,12 @@
 <body>
     
     <header class="p-3">
-        <a href="{{ route('comics.index') }}">
-            Torna alla lista dei comics
+        <a href="{{ route('comics.index') }}" class="mx-3">
+            Comics List
+        </a>
+
+        <a href="{{ route('comics.create') }}" class="mx-3">
+            Create new comic
         </a>
     </header>
 
