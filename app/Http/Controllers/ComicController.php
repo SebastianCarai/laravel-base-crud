@@ -9,7 +9,7 @@ use App\Comic;
 class ComicController extends Controller
 {
     /**
-     * Display a listing of the resource.
+     * ! Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
      */
@@ -25,7 +25,7 @@ class ComicController extends Controller
     }
 
     /**
-     * Show the form for creating a new resource.
+     * ! Show the form for creating a new resource.
      *
      * @return \Illuminate\Http\Response
      */
@@ -35,7 +35,7 @@ class ComicController extends Controller
     }
 
     /**
-     * Store a newly created resource in storage.
+     * ! Store a newly created resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
@@ -58,7 +58,7 @@ class ComicController extends Controller
     }
 
     /**
-     * Display the specified resource.
+     * ! Display the specified resource.
      *
      * @param  int  $id
      * @return \Illuminate\Http\Response
@@ -75,7 +75,7 @@ class ComicController extends Controller
     }
 
     /**
-     * Show the form for editing the specified resource.
+     * TODO: Show the form for editing the specified resource.
      *
      * @param  int  $id
      * @return \Illuminate\Http\Response
@@ -86,7 +86,7 @@ class ComicController extends Controller
     }
 
     /**
-     * Update the specified resource in storage.
+     * TODO: Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
      * @param  int  $id
@@ -98,7 +98,7 @@ class ComicController extends Controller
     }
 
     /**
-     * Remove the specified resource from storage.
+     * TODO: Remove the specified resource from storage.
      *
      * @param  int  $id
      * @return \Illuminate\Http\Response
