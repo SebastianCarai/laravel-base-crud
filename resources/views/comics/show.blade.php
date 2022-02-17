@@ -6,6 +6,8 @@
         <div class="card-body">
             <h5 class="card-title">{{$comic->title}}</h5>
             <p class="card-text">{{$comic->description}}</p>
+            <a class="btn btn-primary" href="{{ route('comics.edit' , ['comic' => $comic->id]) }}">Edit</a>
         </div>
+
     </div>
 @endsection
