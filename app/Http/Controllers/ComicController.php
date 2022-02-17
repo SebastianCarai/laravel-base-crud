@@ -44,6 +44,18 @@ class ComicController extends Controller
     {
         $submitted_comic = $request->all();
 
+        $request->validate(
+            [
+                'title' => 'required|max:100',
+                'description' => 'required|max:50000',
+                'thumb' => 'required|max:300',
+                'series' => 'required|max:100',
+                'price' => 'required|max:8',
+                'type' => 'required|max:50',
+                'sale_date' => 'required|max:15',
+            ]
+        );
+
         $new_comic = new Comic;
         $new_comic->title = $submitted_comic['title'];
         $new_comic->description = $submitted_comic['description'];
@@ -103,6 +115,18 @@ class ComicController extends Controller
         // Get the form info
         $updated_data = $request->all();
 
+        $request->validate(
+            [
+                'title' => 'required|max:100',
+                'description' => 'required|max:50000',
+                'thumb' => 'required|max:300',
+                'series' => 'required|max:100',
+                'price' => 'required|max:8',
+                'type' => 'required|max:50',
+                'sale_date' => 'required|max:15',
+            ]
+        );
+
         $comic_to_edit = Comic::findOrFail($id);
 
         $comic_to_edit->update($updated_data);
@@ -112,7 +136,7 @@ class ComicController extends Controller
     }
 
     /**
-     * TODO: Remove the specified resource from storage.
+     * ! Remove the specified resource from storage.
      *
      * @param  int  $id
      * @return \Illuminate\Http\Response

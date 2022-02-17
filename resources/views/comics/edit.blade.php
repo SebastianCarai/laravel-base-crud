@@ -4,6 +4,16 @@
 <div class="container"> 
     <h1>Edit the comic</h1>
 
+    @if ($errors->any())
+        <div class="alert alert-danger">
+            <ul>
+                @foreach ($errors->all() as $error)
+                    <li>{{ $error }}</li>
+                @endforeach
+            </ul>
+        </div>
+    @endif
+
     <form action="{{ route('comics.update', ['comic' => $comic->id]) }}" method="POST">
         @csrf
         @method('PUT')
@@ -14,27 +24,27 @@
         </div>
         <div class="mb-3">
             <label for="price" class="form-label">Price</label>
-            <input type="text" class="form-control" id="price" name="price" value="{{ $comic->price }}">
+            <input type="text" class="form-control" id="price" name="price" value="{{ old('price') ? old('price') : $comic->price }}">
         </div>
         <div class="mb-3">
             <label for="series" class="form-label">Series</label>
-            <input type="text" class="form-control" id="series" name="series" value="{{ $comic->series }}">
+            <input type="text" class="form-control" id="series" name="series" value="{{ old('series') ? old('series') : $comic->series }}">
         </div>
         <div class="mb-3">
             <label for="type" class="form-label">Type</label>
-            <input type="text" class="form-control" id="type" name="type" value="{{ $comic->type }}">
+            <input type="text" class="form-control" id="type" name="type" value="{{ old('type') ? old('type') : $comic->type }}">
         </div>
         <div class="mb-3">
             <label for="thumb" class="form-label">Image URL</label>
-            <input type="text" class="form-control" id="thumb" name="thumb" value="{{ $comic->thumb }}">
+            <input type="text" class="form-control" id="thumb" name="thumb" value="{{ old('thumb') ? old('thumb') : $comic->thumb }}">
         </div>
         <div class="mb-3">
             <label for="sale_date" class="form-label">Sale_date</label>
-            <input type="text" class="form-control" id="sale_date" name="sale_date" value="{{ $comic->sale_date }}">
+            <input type="text" class="form-control" id="sale_date" name="sale_date" value="{{ old('sale_date') ? old('sale_date') : $comic->sale_date }}">
         </div>
         <div class="mb-3">
             <label for="description" class="form-label">Description</label>
-            <input type="textarea" class="form-control" id="description" name="description" value="{{ $comic->description }}">
+            <input type="textarea" class="form-control" id="description" name="description" value="{{ old('description') ? old('description') : $comic->description }}">
         </div>
 
         <button type="submit" class="btn btn-primary">Submit</button>
